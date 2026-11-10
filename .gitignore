@@ -1,0 +1,12 @@
+# everything is ignored except the published page and the photographs it uses
+/*
+!/.gitignore
+!/index.html
+!/credits.html
+!/favicon.svg
+!/assets/
+/assets/*
+!/assets/img/
+/assets/img/*
+!/assets/img/*-g.jpg
+!/assets/img/*-g640.jpg
