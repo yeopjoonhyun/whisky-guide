@@ -12,7 +12,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300..600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Song+Myung&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   color-scheme: dark;
@@ -32,7 +32,8 @@
   --rye: #a65e20;
   --bourbon: #8a4216;
 
-  --font-display: "Hahmlet", "Noto Serif KR", Georgia, serif;
+  /* Song Myung has one weight (400): every display use stays at 400, so nothing is faux-bolded */
+  --font-display: "Song Myung", "Noto Serif KR", Georgia, serif;
   --font-text: "IBM Plex Sans KR", "Apple SD Gothic Neo", system-ui, sans-serif;
   --wrap: min(1240px, 100% - 2 * clamp(20px, 5vw, 64px));
   --section: clamp(96px, 12vw, 176px);
@@ -46,7 +47,7 @@ body {
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
-h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 300; letter-spacing: -0.03em; line-height: 1.08; }
+h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 400; letter-spacing: -0.015em; line-height: 1.12; }
 p { margin: 0; }
 :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 2px; }
 .wrap { width: var(--wrap); margin-inline: auto; }
@@ -56,7 +57,7 @@ p { margin: 0; }
 /* ---------- header ---------- */
 .top { position: absolute; inset: 0 0 auto; z-index: 3; }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 88px; }
-.logo { font-family: var(--font-display); font-size: 22px; font-weight: 500; letter-spacing: -0.02em; text-decoration: none; }
+.logo { font-family: var(--font-display); font-size: 22px; font-weight: 400; letter-spacing: -0.01em; text-decoration: none; }
 .top nav { display: flex; gap: clamp(16px, 3vw, 36px); font-size: 15px; }
 .top nav a { text-decoration: none; color: var(--smoke); transition: color .2s; }
 .top nav a:hover { color: var(--parchment); }
@@ -71,7 +72,7 @@ p { margin: 0; }
 /* the glass sits high in the frame, so its engraved foot falls into the fade */
 .hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
 .hero .wrap { padding-block: 160px clamp(72px, 10vh, 120px); }
-.hero h1 { font-size: clamp(60px, 9vw, 136px); line-height: .98; letter-spacing: -0.045em; }
+.hero h1 { font-size: clamp(60px, 9vw, 136px); line-height: 1.04; letter-spacing: -0.03em; }
 .hero h1 span { display: block; padding-left: .9em; color: var(--amber); }
 .hero__lead { max-width: 30em; margin-top: clamp(28px, 4vw, 44px); font-size: clamp(17px, 1.4vw, 19px); }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 36px; }
@@ -154,7 +155,7 @@ td.num { font-variant-numeric: tabular-nums; }
 /* ---------- footer ---------- */
 footer { padding-block: 72px 48px; border-top: 1px solid var(--line); }
 footer .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 48px; align-items: end; }
-footer .logo { font-size: clamp(40px, 6vw, 80px); font-weight: 300; letter-spacing: -0.04em; display: block; }
+footer .logo { font-size: clamp(40px, 6vw, 80px); font-weight: 400; letter-spacing: -0.02em; display: block; }
 footer p, footer a { font-size: 14px; color: var(--smoke); }
 footer .legal { display: grid; gap: 6px; justify-items: end; text-align: right; }
 
@@ -170,7 +171,7 @@ footer .legal { display: grid; gap: 6px; justify-items: end; text-align: right; 
 @media (max-width: 760px) {
   .top nav a:not(:last-child) { display: none; }
   .hero__photo { width: 100%; height: 62%; bottom: auto;
-    -webkit-mask-image: linear-gradient(to top, transparent 0, #000 45%); mask-image: linear-gradient(to top, transparent 0, #000 45%); }
+    -webkit-mask-image: linear-gradient(to top, transparent 0, transparent 22%, #000 62%); mask-image: linear-gradient(to top, transparent 0, transparent 22%, #000 62%); }
   .hero__photo img { object-position: 50% 30%; }
   .hero h1 span { padding-left: .5em; }
   .head { grid-template-columns: 1fr; }
